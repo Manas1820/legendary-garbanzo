@@ -1,0 +1,1 @@
+"""gobble_cube package."""
