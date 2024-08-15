@@ -1,4 +1,38 @@
-# Gobble Cube Sample
+# Gobble Cube - Setup and Testing
+
+## Debugging Queries
+
+To view detailed query logs, set the log level to debug:
+
+- **Option 1:** Update your `.env` file with `GOBBLE_CUBE_LOG_LEVEL=DEBUG`.
+- **Option 2:** Directly set the log level to debug in your configuration.
+
+## Generating and Using CSV Files
+
+Run the script in the root directory to generate the necessary CSV files required for the application.
+
+```bash
+poetry run python scripts/gen_fake_csv.py
+```
+
+This script will generate three CSV files that are essential for the application.
+
+## Populating the Database
+
+After generating the CSV files, use the csv files or use the provided script to populate the database with sample data.
+
+```bash
+poetry run python scripts/gen_fake_data.py
+```
+
+## Testing Features
+
+Once the database is populated, use the application documentation to test various features and verify functionality.
+
+## Additional Notes
+
+- Feel Free to use the generated CSV or make tweaks in the values
+- The generated CSV files can be uploaded to the respective routes in your application as needed.
 
 
 ## Poetry
