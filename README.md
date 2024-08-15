@@ -58,7 +58,7 @@ gobble_cube
 ├── tests  # Tests for project.
 └── web  # Package contains web server. Handlers, startup config.
     ├── api  # Package with all handlers.
-    │   └── router.py  # Main router.
+    │   └── views.py  # Main router.
     ├── application.py  # FastAPI application configuration.
     └── lifespan.py  # Contains actions to perform on startup and shutdown.
 ```

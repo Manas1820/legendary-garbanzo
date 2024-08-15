@@ -49,7 +49,7 @@ class Settings(BaseSettings):
 
         :return: database URL.
         """
-        return URL.build(scheme="sqlite", path=f"///{self.db_file}")
+        return URL.build(scheme="sqlite", path=f"//{self.db_file}")
 
     model_config = SettingsConfigDict(
         env_file=".env",

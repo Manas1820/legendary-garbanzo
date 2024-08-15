@@ -18,7 +18,8 @@ tortoise-orm = "^0.21.3"
 aiosqlite = "<0.20.0"
 aiofiles = "^24.1.0"
 httptools = "^0.6.1"
-pymongo = "^4.8.0"
+loguru = "^0.7.2"
+faker = "^27.0.0"
 
 
 [tool.poetry.group.dev.dependencies]

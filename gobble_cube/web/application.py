@@ -1,3 +1,4 @@
+import logging
 from importlib import metadata
 from pathlib import Path
 
@@ -7,10 +8,13 @@ from fastapi.staticfiles import StaticFiles
 from tortoise.contrib.fastapi import register_tortoise
 
 from gobble_cube.db.config import TORTOISE_CONFIG
+from gobble_cube.log import configure_logging
 from gobble_cube.web.api.router import api_router
 from gobble_cube.web.lifespan import lifespan_setup
 
 APP_ROOT = Path(__file__).parent.parent
+
+logger = logging.getLogger(__name__)
 
 
 def get_app() -> FastAPI:
@@ -30,6 +34,10 @@ def get_app() -> FastAPI:
         openapi_url="/api/openapi.json",
         default_response_class=UJSONResponse,
     )
+
+    configure_logging()
+
+    app.logger = logger
 
     # Main router for the API.
     app.include_router(router=api_router, prefix="/api")

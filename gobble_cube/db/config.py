@@ -2,7 +2,9 @@ from typing import List
 
 from gobble_cube.settings import settings
 
-MODELS_MODULES: List[str] = []
+MODELS_MODULES: List[str] = [
+    "gobble_cube.db.models",
+]
 
 TORTOISE_CONFIG = {
     "connections": {
